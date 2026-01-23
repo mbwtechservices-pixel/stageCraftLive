@@ -190,7 +190,7 @@ async function handleBookFormSubmit(e) {
 
     try {
         // Submit to Formspree - Replace YOUR_BOOK_FORM_ID with your actual Formspree endpoint
-        const response = await fetch('https://formspree.io/f/YOUR_BOOK_FORM_ID', {
+        const response = await fetch('https://formspree.io/f/mbdgkpnw', {
             method: 'POST',
             body: formData,
             headers: {
@@ -308,7 +308,7 @@ async function handleApplyFormSubmit(e) {
 
     try {
         // Submit to Formspree - Replace YOUR_APPLY_FORM_ID with your actual Formspree endpoint
-        const response = await fetch('https://formspree.io/f/YOUR_APPLY_FORM_ID', {
+        const response = await fetch('https://formspree.io/f/mjgyojvd', {
             method: 'POST',
             body: formData,
             headers: {
