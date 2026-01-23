@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Stagecraft Live - Book exceptional artists for your events or apply as a performer. Seamless booking forms for event organizers and artists in Bangalore.">
+    <meta name="keywords" content="book artists contact, artist booking form, hire performers, artist application, event entertainment booking, Bangalore event booking, artist inquiry">
+    <meta name="author" content="Stagecraft Live">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Contact Stagecraft Live – Book Artists or Apply as Performer">
+    <meta property="og:description" content="Get in touch with Stagecraft Live. Book exceptional artists for your events or apply to join our community of talented performers.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stagecraftlive.com/contact">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Stagecraft Live">
+    <meta name="twitter:description" content="Book artists or apply as a performer on Stagecraft Live.">
+    <link rel="canonical" href="https://stagecraftlive.com/contact">
+    <link rel="icon" type="image/png" href="Images/logo.png">
+    <title>Contact & Booking Forms – Stagecraft Live | Artist & Event Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Stagecraft Live",
+        "description": "Artist booking platform for events",
+        "url": "https://stagecraftlive.com/contact",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Bangalore",
+            "addressRegion": "Karnataka",
+            "addressCountry": "IN"
+        }
+    }
+    </script>
+</head>
+<body class="smooth-scroll bg-white">
+    <!-- Sticky Navigation -->
+    <nav class="sticky-nav fixed w-full top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <img src="/Images/logo.png" alt="StageCraft Live Logo" class="h-12 w-auto">
+                    <a href="/" class="text-lg font-bold bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">
+                        StageCraft Live
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="/" class="text-gray-700 hover:text-teal-600 transition">Home</a>
+                    <a href="/about.html" class="text-gray-700 hover:text-teal-600 transition">About</a>
+                    <a href="/gallery.html" class="text-gray-700 hover:text-teal-600 transition">Gallery</a>
+                    <a href="/contact.html" class="text-gray-700 hover:text-teal-600 transition">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobileMenuBtn" class="p-2 rounded-lg hover:bg-gray-100 transition">
+                        <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden border-t border-gray-200 py-4 bg-white">
+                <div class="space-y-3 px-2">
+                    <a href="/" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-teal-50 rounded-lg transition">Home</a>
+                    <a href="/about.html" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-teal-50 rounded-lg transition">About</a>
+                    <a href="/gallery.html" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-teal-50 rounded-lg transition">Gallery</a>
+                    <a href="/contact.html" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-teal-50 rounded-lg transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 scroll-reveal">
+                Book Artists & Connect with Talent
+            </h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto scroll-reveal">
+                Ready to book exceptional talent or showcase your skills? Stagecraft Live connects event organizers with professional performers in minutes. Get started with our simple booking process.
+            </p>
+        </div>
+    </section>
+
+    <!-- Forms Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Book an Artist CTA Card -->
+                <div class="bg-white rounded-2xl shadow-sm border border-teal-100 p-12 scroll-reveal card-hover flex flex-col items-center justify-center text-center min-h-96">
+                    <div class="mb-6">
+                        <div class="w-20 h-20 bg-gradient-to-br from-teal-100 to-teal-50 rounded-2xl mx-auto flex items-center justify-center text-5xl mb-4">
+                            🎤
+                        </div>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-3">Book Exceptional Artists</h2>
+                        <p class="text-gray-600 text-lg mb-8">
+                            Find the perfect performers for your corporate events, weddings, parties, and celebrations. Tell us your event details and we'll match you with talented artists within hours. Browse portfolios, compare rates, and book securely.
+                        </p>
+                    </div>
+                    <button
+                        onclick="openModal('bookModal')"
+                        class="btn-primary px-8 py-3 rounded-lg text-white font-semibold"
+                    >
+                        Open Booking Form
+                    </button>
+                </div>
+
+                <!-- Apply as Artist CTA Card -->
+                <div class="bg-white rounded-2xl shadow-sm border border-cyan-100 p-12 scroll-reveal card-hover flex flex-col items-center justify-center text-center min-h-96">
+                    <div class="mb-6">
+                        <div class="w-20 h-20 bg-gradient-to-br from-cyan-100 to-cyan-50 rounded-2xl mx-auto flex items-center justify-center text-5xl mb-4">
+                            ⭐
+                        </div>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-3">Apply as a Performer</h2>
+                        <p class="text-gray-600 text-lg mb-8">
+                            Showcase your talent and join our community of exceptional artists. Connect with event organizers looking for performers like you. Submit your profile, share your demo video, and start receiving booking opportunities.
+                        </p>
+                    </div>
+                    <button
+                        onclick="openModal('applyModal')"
+                        style="background: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%);"
+                        class="px-8 py-3 rounded-lg text-white font-semibold hover:shadow-lg hover:scale-105 transition"
+                    >
+                        Open Application Form
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Modal -->
+    <div id="bookModal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 z-[100] flex items-center justify-center p-4">
+        <div class="modal-content bg-white rounded-2xl shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto animate-modalSlideIn">
+            <div class="sticky top-0 bg-white border-b border-gray-200 p-6 flex justify-between items-center">
+                <h2 class="text-2xl font-bold text-gray-900">Book an Artist</h2>
+                <button onclick="closeModal('bookModal')" class="text-gray-500 hover:text-gray-700 transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="p-6">
+                <div id="bookSuccess" class="success-message">
+                    <div class="flex items-center">
+                        <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Thank you! We'll review your request and connect you with matching artists soon.</span>
+                    </div>
+                </div>
+
+                <form id="bookForm" action="https://formspree.io/f/mbdgkpnw" method="POST" class="space-y-5">
+                    <input type="hidden" name="_subject" value="New Artist Booking Request - Stagecraft Live">
+                    <input type="hidden" name="_next" value="">
+                    <div class="form-group">
+                        <label class="form-label block text-sm font-semibold mb-2" for="book-name">Full Name *</label>
+                        <input
+                            type="text"
+                            id="book-name"
+                            name="name"
+                            class="form-input w-full px-4 py-3 rounded-lg text-gray-900 placeholder-gray-400"
+                            placeholder="Your name"
+                            required
+                        />
+                        <div class="error-message" id="book-name-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label block text-sm font-semibold mb-2" for="book-email">Email *</label>
+                        <input
+                            type="email"
+                            id="book-email"
+                            name="email"
+                            class="form-input w-full px-4 py-3 rounded-lg text-gray-900 placeholder-gray-400"
+                            placeholder="your@email.com"
+                            required
+                        />
+                        <div class="error-message" id="book-email-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label block text-sm font-semibold mb-2" for="book-phone">Phone Number *</label>
+                        <input
+                            type="tel"
+                            id="book-phone"
+                            name="phone"
+                            class="form-input w-full px-4 py-3 rounded-lg text-gray-900 placeholder-gray-400"
+                            placeholder="+91 98765 43210"
+                            required
+                        />
+                        <div class="error-message" id="book-phone-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label block text-sm font-semibold mb-2" for="book-location">Event Location *</label>
+                        <select
+                            id="book-location"
+                            name="location"
+                            class="form-input w-full px-4 py-3 rounded-lg text-gray-900"
+                            required
+                        >
+                            <option value="">Select a location</option>
+                            <option value="Indiranagar">Indiranagar</option>
+                            <option value="Whitefield">Whitefield</option>
+                            <option value="Koramangala">Koramangala</option>
+                            <option value="HSR Layout">HSR Layout</option>
+                            <option value="Electronic City">Electronic City</option>
+                            <option value="Yelahanka">Yelahanka</option>
+                            <option value="Malleshwaram">Malleshwaram</option>
+                        </select>
+                        <div class="error-message" id="book-location-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label block text-sm font-semibold mb-3">Preferred Genres *</label>
+                        <div id="bookGenreFields" class="space-y-3 dynamic-fields">
+                            <div class="flex gap-2">
+                                <input
+                                    type="text"
+                                    name="genre"
+                                    class="form-input flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-400"
+                                    placeholder="e.g., Live Music, DJ, Dance"
+                                    required
+                                />
+                                <button
+                                    type="button"
+                                    class="btn-secondary px-4 py-3 rounded-lg font-semibold"
+                                    onclick="removeField(this)"
+                                >
+                                    Remove
+                                </button>
+                            </div>
+                        </div>
+                        <button
+                            type="button"
+                            class="mt-3 px-4 py-2 text-teal-600 font-semibold border border-teal-300 rounded-lg hover:bg-teal-50 transition"
+                            onclick="addGenreField('bookGenreFields')"
+                        >
+                            + Add Genre
+                        </button>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label block text-sm font-semibold mb-3">Preferred Languages *</label>
+                        <div id="bookLanguageFields" class="space-y-3 dynamic-fields">
+                            <div class="flex gap-2">
+                                <input
+                                    type="text"
+                                    name="language"
+                                    class="form-input flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-400"
+                                    placeholder="e.g., English, Kannada, Hindi"
+                                    required
+                                />
+                                <button
+                                    type="button"
+                                    class="btn-secondary px-4 py-3 rounded-lg font-semibold"
+                                    onclick="removeField(this)"
+                                >
+                                    Remove
+                                </button>
+                            </div>
+                        </div>
+                        <button
+                            type="button"
+                            class="mt-3 px-4 py-2 text-teal-600 font-semibold border border-teal-300 rounded-lg hover:bg-teal-50 transition"
+                            onclick="addLanguageField('bookLanguageFields')"
+                        >
+                            + Add Language
+                        </button>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <button
+                            type="submit"
+                            class="btn-primary flex-1 py-3 rounded-lg text-white font-semibold mt-6"
+                        >
+                            Submit Request
+                        </button>
+                        <button
+                            type="button"
+                            onclick="closeModal('bookModal')"
+                            class="btn-secondary flex-1 py-3 rounded-lg font-semibold mt-6"
+                        >
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Apply Modal -->
+    <div id="applyModal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 z-[100] flex items-center justify-center p-4">
+        <div class="modal-content bg-white rounded-2xl shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto animate-modalSlideIn">
+            <div class="sticky top-0 bg-white border-b border-gray-200 p-6 flex justify-between items-center">
+                <h2 class="text-2xl font-bold text-gray-900">Apply as an Artist</h2>
+                <button onclick="closeModal('applyModal')" class="text-gray-500 hover:text-gray-700 transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="p-6">
+                <div id="applySuccess" class="success-message">
+                    <div class="flex items-center">
+                        <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Thank you for applying! We'll review your profile and get back to you soon.</span>
+                    </div>
+                </div>
+
+                <form id="applyForm" action="https://formspree.io/f/mjgyojvd" method="POST" class="space-y-5">
+                    <input type="hidden" name="_subject" value="New Artist Application - Stagecraft Live">
+                    <input type="hidden" name="_next" value="">
+                    <div class="form-group">
+                        <label class="form-label block text-sm font-semibold mb-2" for="apply-name">Full Name *</label>
+                        <input
+                            type="text"
+                            id="apply-name"
+                            name="name"
+                            class="form-input w-full px-4 py-3 rounded-lg text-gray-900 placeholder-gray-400"
+                            placeholder="Your name"
+                            required
+                        />
+                        <div class="error-message" id="apply-name-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label block text-sm font-semibold mb-2" for="apply-email">Email *</label>
+                        <input
+                            type="email"
+                            id="apply-email"
+                            name="email"
+                            class="form-input w-full px-4 py-3 rounded-lg text-gray-900 placeholder-gray-400"
+                            placeholder="your@email.com"
+                            required
+                        />
+                        <div class="error-message" id="apply-email-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label block text-sm font-semibold mb-2" for="apply-phone">Phone Number *</label>
+                        <input
+                            type="tel"
+                            id="apply-phone"
+                            name="phone"
+                            class="form-input w-full px-4 py-3 rounded-lg text-gray-900 placeholder-gray-400"
+                            placeholder="+91 98765 43210"
+                            required
+                        />
+                        <div class="error-message" id="apply-phone-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label block text-sm font-semibold mb-2" for="apply-demo">Demo Video Link (YouTube/Vimeo) *</label>
+                        <input
+                            type="url"
+                            id="apply-demo"
+                            name="demo_video"
+                            class="form-input w-full px-4 py-3 rounded-lg text-gray-900 placeholder-gray-400"
+                            placeholder="https://youtube.com/watch?v=..."
+                            required
+                        />
+                        <p class="text-sm text-gray-500 mt-1">Share a link to your performance or portfolio</p>
+                        <div class="error-message" id="apply-demo-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label block text-sm font-semibold mb-3">Your Genres *</label>
+                        <div id="applyGenreFields" class="space-y-3 dynamic-fields">
+                            <div class="flex gap-2">
+                                <input
+                                    type="text"
+                                    name="genre"
+                                    class="form-input flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-400"
+                                    placeholder="e.g., Live Music, Comedy, Dance"
+                                    required
+                                />
+                                <button
+                                    type="button"
+                                    class="btn-secondary px-4 py-3 rounded-lg font-semibold"
+                                    onclick="removeField(this)"
+                                >
+                                    Remove
+                                </button>
+                            </div>
+                        </div>
+                        <button
+                            type="button"
+                            class="mt-3 px-4 py-2 text-cyan-600 font-semibold border border-cyan-300 rounded-lg hover:bg-cyan-50 transition"
+                            onclick="addGenreField('applyGenreFields')"
+                        >
+                            + Add Genre
+                        </button>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label block text-sm font-semibold mb-3">Languages You Perform In *</label>
+                        <div id="applyLanguageFields" class="space-y-3 dynamic-fields">
+                            <div class="flex gap-2">
+                                <input
+                                    type="text"
+                                    name="language"
+                                    class="form-input flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-400"
+                                    placeholder="e.g., English, Kannada, Hindi"
+                                    required
+                                />
+                                <button
+                                    type="button"
+                                    class="btn-secondary px-4 py-3 rounded-lg font-semibold"
+                                    onclick="removeField(this)"
+                                >
+                                    Remove
+                                </button>
+                            </div>
+                        </div>
+                        <button
+                            type="button"
+                            class="mt-3 px-4 py-2 text-cyan-600 font-semibold border border-cyan-300 rounded-lg hover:bg-cyan-50 transition"
+                            onclick="addLanguageField('applyLanguageFields')"
+                        >
+                            + Add Language
+                        </button>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label block text-sm font-semibold mb-3">Preferred Bangalore Locations *</label>
+                        <div id="applyLocationFields" class="space-y-3 dynamic-fields">
+                            <div class="flex gap-2">
+                                <select
+                                    name="location"
+                                    class="form-input flex-1 px-4 py-3 rounded-lg text-gray-900"
+                                    required
+                                >
+                                    <option value="">Select location</option>
+                                    <option value="Indiranagar">Indiranagar</option>
+                                    <option value="Whitefield">Whitefield</option>
+                                    <option value="Koramangala">Koramangala</option>
+                                    <option value="HSR Layout">HSR Layout</option>
+                                    <option value="Electronic City">Electronic City</option>
+                                    <option value="Yelahanka">Yelahanka</option>
+                                    <option value="Malleshwaram">Malleshwaram</option>
+                                </select>
+                                <button
+                                    type="button"
+                                    class="btn-secondary px-4 py-3 rounded-lg font-semibold"
+                                    onclick="removeField(this)"
+                                >
+                                    Remove
+                                </button>
+                            </div>
+                        </div>
+                        <button
+                            type="button"
+                            class="mt-3 px-4 py-2 text-cyan-600 font-semibold border border-cyan-300 rounded-lg hover:bg-cyan-50 transition"
+                            onclick="addLocationField('applyLocationFields')"
+                        >
+                            + Add Location
+                        </button>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <button
+                            type="submit"
+                            class="flex-1 py-3 rounded-lg text-white font-semibold mt-6 transition-all"
+                            style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);"
+                            onmouseover="this.style.boxShadow='0 10px 25px rgba(6, 182, 212, 0.3)'; this.style.transform='translateY(-2px)';"
+                            onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';"
+                        >
+                            Submit Application
+                        </button>
+                        <button
+                            type="button"
+                            onclick="closeModal('applyModal')"
+                            class="btn-secondary flex-1 py-3 rounded-lg font-semibold mt-6"
+                        >
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Stagecraft Live</h3>
+                    <p class="text-gray-400">
+                        Connecting exceptional talent with unforgettable events.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/" class="hover:text-white transition">Home</a></li>
+                        <li><a href="/about.html" class="hover:text-white transition">About</a></li>
+                        <li><a href="/contact.html" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">For Artists</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/contact.html" class="hover:text-white transition">Apply Now</a></li>
+                        <li><a href="/about.html" class="hover:text-white transition">Learn More</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">For Events</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/contact.html" class="hover:text-white transition">Book Artists</a></li>
+                        <li><a href="/about.html" class="hover:text-white transition">Our Story</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 Stagecraft Live. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+   

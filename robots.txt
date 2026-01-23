@@ -1,0 +1,25 @@
+# StageCraft Live - Robots Configuration
+
+# Allow all bots to crawl the site
+User-agent: *
+Allow: /
+Disallow: /test.html
+Disallow: /*.js
+Disallow: /*.css
+
+# Sitemap location
+Sitemap: https://stagecraftlive.com/sitemap.xml
+
+# Google-specific rules
+User-agent: Googlebot
+Allow: /
+
+# Bing-specific rules
+User-agent: Bingbot
+Allow: /
+
+# Crawl delay (optional - adjust based on server capacity)
+# Crawl-delay: 1
+
+# Request rate (optional)
+# Request-rate: 30/1m

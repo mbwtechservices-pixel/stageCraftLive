@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="StageCraft Live Gallery - Explore our collection of professional singers, live bands, orchestras, and performances. Watch Pournami (@voiceofPournami) performances and discover our music services for events.">
+    <meta name="keywords" content="professional singers gallery, live bands showcase, orchestras, live performances, Pournami performances, wedding music, event entertainment, music services">
+    <meta name="author" content="StageCraft Live">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="StageCraft Live Gallery - Professional Singers & Live Bands">
+    <meta property="og:description" content="Explore our collection of professional singers, live bands, and orchestras. Watch performances from Pournami (@voiceofPournami) and discover music services for your events.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stagecraftlive.com/gallery.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="StageCraft Live Gallery">
+    <meta name="twitter:description" content="Professional singers, live bands, and orchestra performances for events.">
+    <link rel="canonical" href="https://stagecraftlive.com/gallery.html">
+    <link rel="icon" type="image/png" href="Images/logo.png">
+    <title>StageCraft Live Gallery – Professional Singers & Live Performances</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Register Service Worker for 72-hour caching
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(reg => console.log('Service Worker registered for 72-hour cache'))
+                .catch(err => console.log('Service Worker registration failed:', err));
+        }
+    </script>
+</head>
+<body class="smooth-scroll bg-white">
+    <!-- Sticky Navigation -->
+    <nav class="sticky-nav fixed w-full top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <img src="Images/logo.png" alt="StageCraft Live Logo" class="h-12 w-auto">
+                    <a href="index.html" class="text-lg font-bold bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">
+                        StageCraft Live
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-teal-600 transition">Home</a>
+                    <a href="about.html" class="text-gray-700 hover:text-teal-600 transition">About</a>
+                    <a href="gallery.html" class="text-teal-600 font-semibold">Gallery</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-teal-600 transition">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobileMenuBtn" class="p-2 rounded-lg hover:bg-gray-100 transition">
+                        <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden border-t border-gray-200 py-4 bg-white">
+                <div class="space-y-3 px-2">
+                    <a href="index.html" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-teal-50 rounded-lg transition">Home</a>
+                    <a href="about.html" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-teal-50 rounded-lg transition">About</a>
+                    <a href="gallery.html" class="block px-4 py-2 text-teal-600 font-semibold hover:bg-teal-50 rounded-lg transition">Gallery</a>
+                    <a href="contact.html" class="block px-4 py-2 text-gray-700 hover:text-teal-600 hover:bg-teal-50 rounded-lg transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 scroll-reveal">
+                    Our Gallery
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto scroll-reveal">
+                    Discover professional singers, live bands, and orchestras from StageCraft Live. Browse performances from founder Pournami (@voiceofPournami) and explore the diverse musical experiences we create for weddings, corporate events, and celebrations.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Categories -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 scroll-reveal">Our Premium Services</h2>
+            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto scroll-reveal">
+                Professional singers, live bands, and orchestras for every celebration
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
+                <div class="text-center scroll-reveal card-hover p-6 rounded-2xl bg-gradient-to-br from-teal-50 to-cyan-50">
+                    <div class="text-5xl mb-4">🎤</div>
+                    <h3 class="text-lg font-semibold text-gray-900">Professional Singers</h3>
+                    <p class="text-sm text-gray-600 mt-2">Highly experienced male & female singers for all occasions</p>
+                </div>
+                <div class="text-center scroll-reveal card-hover p-6 rounded-2xl bg-gradient-to-br from-blue-50 to-indigo-50">
+                    <div class="text-5xl mb-4">🎸</div>
+                    <h3 class="text-lg font-semibold text-gray-900">Live Bands</h3>
+                    <p class="text-sm text-gray-600 mt-2">Full live bands with musicians, not backing tracks</p>
+                </div>
+                <div class="text-center scroll-reveal card-hover p-6 rounded-2xl bg-gradient-to-br from-orange-50 to-red-50">
+                    <div class="text-5xl mb-4">🎼</div>
+                    <h3 class="text-lg font-semibold text-gray-900">Orchestras</h3>
+                    <p class="text-sm text-gray-600 mt-2">Full-scale live orchestras & ensembles</p>
+                </div>
+                <div class="text-center scroll-reveal card-hover p-6 rounded-2xl bg-gradient-to-br from-green-50 to-teal-50">
+                    <div class="text-5xl mb-4">🎵</div>
+                    <h3 class="text-lg font-semibold text-gray-900">Multiple Genres</h3>
+                    <p class="text-sm text-gray-600 mt-2">Malayalam, Tamil, Hindi, English & western music</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Gallery Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-teal-50 to-cyan-50">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 scroll-reveal">Pournami's Original Compositions</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto scroll-reveal">
+                Watch original compositions and performances from Pournami (@voiceofPournami), showcasing the artistic excellence of StageCraft Live
+            </p>
+            
+            <!-- Music Videos Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                <div class="scroll-reveal">
+                    <div class="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/0_1LkZHjVBE" title="Ennile" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mt-4">Ennile</h3>
+                </div>
+                
+                <div class="scroll-reveal">
+                    <div class="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/eborT0V26EM" title="Aapki Bahon Me" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mt-4">Aapki Bahon Me</h3>
+                </div>
+                
+                <div class="scroll-reveal">
+                    <div class="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/FbgeWJDao3A" title="Waiting For You" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mt-4">Waiting For You</h3>
+                </div>
+                
+                <div class="scroll-reveal">
+                    <div class="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/31t3W8RhWqE" title="Dhanumasapulariyil" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mt-4">Dhanumasapulariyil</h3>
+                </div>
+                
+                <div class="scroll-reveal">
+                    <div class="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/eF-2S_Wlnk0" title="Maa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mt-4">Maa</h3>
+                </div>
+            </div>
+            
+            <!-- Cover Songs Section -->
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 scroll-reveal mt-16">Cover Songs</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto scroll-reveal">
+                Beautiful renditions of popular songs across multiple languages
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                <div class="scroll-reveal">
+                    <div class="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/IYcJgQcWc3c" title="Munpe Va" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mt-4">Munpe Va (Tamil-Telugu)</h3>
+                </div>
+                
+                <div class="scroll-reveal">
+                    <div class="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/D-T6GSqutJg" title="Indraneelimayolum" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mt-4">Indraneelimayolum (Malayalam)</h3>
+                </div>
+                
+                <div class="scroll-reveal">
+                    <div class="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/JhLubfh7yRQ" title="Vaseegara" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mt-4">Vaseegara (Tamil-Hindi)</h3>
+                </div>
+                
+                <div class="scroll-reveal">
+                    <div class="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/ZNDQrNXaLAQ" title="Netru Illatha Matram" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mt-4">Netru Illatha Matram (Tamil)</h3>
+                </div>
+                
+                <div class="scroll-reveal">
+                    <div class="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/hUoj3jx8DQc" title="Taningle" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mt-4">Taningle (Manipuri)</h3>
+                </div>
+            </div>
+            
+            <!-- Tours and Performances Section -->
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 scroll-reveal mt-16">Tours and Performances</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto scroll-reveal">
+                Live performances from various events and concerts
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                <div class="scroll-reveal">
+                    <div class="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/5Og--dlmZ8E" title="Dala Sangeetholsavam - Dubai" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mt-4">Dala Sangeetholsavam - Dubai [2011]</h3>
+                </div>
+                
+                <div class="scroll-reveal">
+                    <div class="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/ySh8du8MwEo" title="Goonjthi Dhwani - Bangalore" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mt-4">Goonjthi Dhwani - Bangalore [2023]</h3>
+                </div>
+                
+                <div class="scroll-reveal">
+                    <div class="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/V7ShoMhK_8M" title="Kalai Koodam - Bangalore" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mt-4">Kalai Koodam - Bangalore [2023]</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">StageCraft Live</h3>
+                    <p class="text-gray-400">Premium live music experiences for weddings, corporate events, and celebrations. Founded by Pournami (@voiceofPournami).</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="gallery.html" class="hover:text-white transition">Gallery</a></li>
+                        <li><a href="about.html" class="hover:text-white transition">About</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="contact.html" class="hover:text-white transition">Book Professional Singers</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Live Bands & Orchestras</a></li>
+                        <li><a href="about.html" class="hover:text-white transition">Our Story</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect with Pournami</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="https://www.facebook.com/profile.php?id=100082300257295" target="_blank" class="hover:text-white transition">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/voiceof_pournami" target="_blank" class="hover:text-white transition">Instagram</a></li>
+                        <li><a href="https://www.youtube.com/channel/UCpYnvSq2icYPyucAtDfCdvg" target="_blank" class="hover:text-white transition">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <p class="text-gray-400 text-center">
+                    &copy; 2026 StageCraft Live. All rights reserved. Premium live music performances for celebrations.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
