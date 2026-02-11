@@ -421,6 +421,93 @@
                 <form id="applyForm" action="https://formspree.io/f/mjgyojvd" method="POST" class="space-y-5">
                     <input type="hidden" name="_subject" value="New Artist Application - Stagecraft Live">
                     <input type="hidden" name="_next" value="">
+
+                    <!-- Are you a (Artist Type) -->
+                    <div class="form-group">
+                        <label class="form-label block text-sm font-semibold mb-2">Are you a *</label>
+                        <select
+                            id="artistType"
+                            name="artist_type"
+                            class="form-input w-full px-4 py-3 rounded-lg text-gray-900"
+                            onchange="handleArtistTypeChange()"
+                            required
+                        >
+                            <option value="">Select</option>
+                            <option value="Singer">Singer</option>
+                            <option value="Musician">Musician</option>
+                            <option value="Band">Band</option>
+                            <option value="DJ">DJ</option>
+                        </select>
+                    </div>
+
+                    <!-- Musician extra fields -->
+                    <div id="musicianFields" class="hidden space-y-3">
+                        <label class="form-label block text-sm font-semibold">Select Instrument</label>
+                        <div class="grid grid-cols-2 gap-2 text-sm">
+                            <label><input type="checkbox" name="instrument" value="Guitar" class="mr-1"> Guitar</label>
+                            <label><input type="checkbox" name="instrument" value="Keyboard" class="mr-1"> Keyboard</label>
+                            <label><input type="checkbox" name="instrument" value="Drums" class="mr-1"> Drums</label>
+                            <label><input type="checkbox" name="instrument" value="Dholak" class="mr-1"> Dholak</label>
+                            <label><input type="checkbox" name="instrument" value="Mridangam" class="mr-1"> Mridangam</label>
+                            <label><input type="checkbox" name="instrument" value="Tabla" class="mr-1"> Tabla</label>
+                            <label><input type="checkbox" name="instrument" value="Violin" class="mr-1"> Violin</label>
+                            <label><input type="checkbox" id="otherInstrumentCheck" class="mr-1"> Others</label>
+                        </div>
+                        <input
+                            type="text"
+                            id="otherInstrumentInput"
+                            name="other_instrument"
+                            placeholder="Enter instrument name"
+                            class="form-input w-full px-4 py-3 rounded-lg text-gray-900 placeholder-gray-400 hidden"
+                        />
+                    </div>
+
+                    <!-- Band extra fields -->
+                    <div id="bandFields" class="hidden space-y-4">
+                        <div>
+                            <label class="form-label block text-sm font-semibold mb-2">Band Type</label>
+                            <input
+                                type="text"
+                                name="band_style"
+                                placeholder="Rock, Pop, Indie, Jazz..."
+                                class="form-input w-full px-4 py-3 rounded-lg text-gray-900 placeholder-gray-400"
+                            />
+                        </div>
+                        <div>
+                            <label class="form-label block text-sm font-semibold mb-2">Band Size</label>
+                            <select
+                                name="band_size"
+                                class="form-input w-full px-4 py-3 rounded-lg text-gray-900"
+                            >
+                                <option value="">Select size</option>
+                                <option value="Two-piece">Two-piece</option>
+                                <option value="Three-piece">Three-piece</option>
+                                <option value="Four-piece">Four-piece</option>
+                                <option value="Five-piece">Five-piece</option>
+                                <option value="Six-piece">Six-piece</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="form-label block text-sm font-semibold mb-2">Instrument Details</label>
+                            <input
+                                type="text"
+                                name="band_instruments"
+                                placeholder="Eg. Guitar, Bass, Drums, Vocals"
+                                class="form-input w-full px-4 py-3 rounded-lg text-gray-900 placeholder-gray-400"
+                            />
+                        </div>
+                        <div>
+                            <label class="form-label block text-sm font-semibold mb-2">Band Name</label>
+                            <input
+                                type="text"
+                                name="band_name"
+                                placeholder="Enter band name"
+                                class="form-input w-full px-4 py-3 rounded-lg text-gray-900 placeholder-gray-400"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- Existing core questions -->
                     <div class="form-group">
                         <label class="form-label block text-sm font-semibold mb-2" for="apply-name">Full Name *</label>
                         <input

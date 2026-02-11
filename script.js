@@ -234,80 +234,17 @@ async function handleBookFormSubmit(e) {
 async function handleApplyFormSubmit(e) {
     e.preventDefault();
 
-    // Clear previous errors
-    clearErrors();
-
-    // Get form data
     const form = e.target;
-    const name = document.getElementById('apply-name').value.trim();
-    const email = document.getElementById('apply-email').value.trim();
-    const phone = document.getElementById('apply-phone').value.trim();
-    const demoVideo = document.getElementById('apply-demo').value.trim();
 
-    // Get genres
-    const genreInputs = form.querySelectorAll('input[name="genre"]');
-    const genres = Array.from(genreInputs).map(input => input.value.trim()).filter(Boolean);
-
-    // Get languages
-    const languageInputs = form.querySelectorAll('input[name="language"]');
-    const languages = Array.from(languageInputs).map(input => input.value.trim()).filter(Boolean);
-
-    // Get locations
-    const locationSelects = form.querySelectorAll('select[name="location"]');
-    const locations = Array.from(locationSelects).map(select => select.value.trim()).filter(Boolean);
-
-    // Validate
-    let isValid = true;
-
-    if (!name) {
-        showError('apply-name-error', 'Name is required');
-        isValid = false;
+    // Let browser required fields handle basic validation
+    if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
     }
 
-    if (!email || !isValidEmail(email)) {
-        showError('apply-email-error', 'Valid email is required');
-        isValid = false;
-    }
-
-    if (!phone) {
-        showError('apply-phone-error', 'Phone number is required');
-        isValid = false;
-    }
-
-    if (!demoVideo || !isValidUrl(demoVideo)) {
-        showError('apply-demo-error', 'Valid video link is required (YouTube or Vimeo)');
-        isValid = false;
-    }
-
-    if (genres.length === 0) {
-        alert('Please add at least one genre');
-        isValid = false;
-    }
-
-    if (languages.length === 0) {
-        alert('Please add at least one language');
-        isValid = false;
-    }
-
-    if (locations.length === 0) {
-        alert('Please add at least one preferred location');
-        isValid = false;
-    }
-
-    if (!isValid) return;
-
-    // Prepare form data for Formspree
-    const formData = new FormData();
-    formData.append('name', name);
-    formData.append('email', email);
-    formData.append('phone', phone);
-    formData.append('demo_video', demoVideo);
-    formData.append('genres', genres.join(', '));
-    formData.append('languages', languages.join(', '));
-    formData.append('locations', locations.join(', '));
+    const formData = new FormData(form);
 
     try {
-        // Submit to Formspree - Replace YOUR_APPLY_FORM_ID with your actual Formspree endpoint
         const response = await fetch('https://formspree.io/f/mjgyojvd', {
             method: 'POST',
             body: formData,
@@ -317,26 +254,12 @@ async function handleApplyFormSubmit(e) {
         });
 
         if (response.ok) {
-            // Show success message with animation
-            showSuccessMessage('applySuccess');
-
-            // Reset form
+            alert('Thank you for applying! We will review your profile and get back to you soon.');
             form.reset();
-
-            // Reset dynamic fields to 1 each
-            resetDynamicFields('applyGenreFields');
-            resetDynamicFields('applyLanguageFields');
-            resetDynamicFields('applyLocationFields');
-
-            // Scroll to success message
-            setTimeout(() => {
-                document.getElementById('applySuccess').scrollIntoView({ behavior: 'smooth' });
-            }, 100);
-
-            // Hide success message after 5 seconds
-            setTimeout(() => {
-                document.getElementById('applySuccess').classList.remove('show');
-            }, 5000);
+            // Reset conditional sections
+            if (typeof handleArtistTypeChange === 'function') {
+                handleArtistTypeChange();
+            }
         } else {
             alert('There was an error submitting your application. Please try again.');
         }
@@ -345,6 +268,42 @@ async function handleApplyFormSubmit(e) {
         alert('There was an error submitting your application. Please try again.');
     }
 }
+
+// ============================================
+// APPLY FORM: ARTIST TYPE CONDITIONAL FIELDS
+// ============================================
+function handleArtistTypeChange() {
+    const typeSelect = document.getElementById('artistType');
+    if (!typeSelect) return;
+
+    const musicianFields = document.getElementById('musicianFields');
+    const bandFields = document.getElementById('bandFields');
+    const value = typeSelect.value;
+
+    if (musicianFields) {
+        musicianFields.classList.toggle('hidden', value !== 'Musician');
+    }
+    if (bandFields) {
+        bandFields.classList.toggle('hidden', value !== 'Band');
+    }
+}
+
+// Show/hide \"Other instrument\" text box
+document.addEventListener('DOMContentLoaded', () => {
+    const otherInstrumentCheck = document.getElementById('otherInstrumentCheck');
+    const otherInstrumentInput = document.getElementById('otherInstrumentInput');
+
+    if (otherInstrumentCheck && otherInstrumentInput) {
+        otherInstrumentCheck.addEventListener('change', () => {
+            if (otherInstrumentCheck.checked) {
+                otherInstrumentInput.classList.remove('hidden');
+            } else {
+                otherInstrumentInput.classList.add('hidden');
+                otherInstrumentInput.value = '';
+            }
+        });
+    }
+});
 
 // ============================================
 // DYNAMIC FIELD MANAGEMENT
